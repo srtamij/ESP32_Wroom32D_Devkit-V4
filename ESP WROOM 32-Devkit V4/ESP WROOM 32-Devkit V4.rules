@@ -1,0 +1,86 @@
+
+(rules PCB ESP WROOM 32-Devkit V4
+  (snap_angle 
+    fortyfive_degree
+  )
+  (autoroute_settings
+    (fanout off)
+    (autoroute on)
+    (postroute on)
+    (vias on)
+    (via_costs 50)
+    (plane_via_costs 5)
+    (start_ripup_costs 100)
+    (start_pass_no 40)
+    (layer_rule F.Cu
+      (active on)
+      (preferred_direction horizontal)
+      (preferred_direction_trace_costs 1.0)
+      (against_preferred_direction_trace_costs 2.8)
+    )
+    (layer_rule B.Cu
+      (active on)
+      (preferred_direction vertical)
+      (preferred_direction_trace_costs 1.0)
+      (against_preferred_direction_trace_costs 1.6)
+    )
+  )
+  (rule
+    (width 250.0)
+    (clearance 180.2)
+    (clearance 125.0 (type smd_to_turn_gap))
+    (clearance 180.2 (type smd))
+    (clearance 180.2 (type "kicad_default"))
+    (clearance 180.2 (type kicad))
+  )
+  (padstack "Via[0-1]_800:400_um"
+    (shape
+      (circle F.Cu 800.0 0.0 0.0)
+    )
+    (shape
+      (circle B.Cu 800.0 0.0 0.0)
+    )
+    (attach off)
+  )
+  (via 
+    "Via[0-1]_800:400_um" "Via[0-1]_800:400_um" default
+  )
+  (via 
+    "Via[0-1]_800:400_um-kicad_default" "Via[0-1]_800:400_um" "kicad_default"
+  )
+  (via_rule
+    default "Via[0-1]_800:400_um"
+  )
+  (via_rule
+    "kicad_default" "Via[0-1]_800:400_um-kicad_default"
+  )
+  (class default
+    (clearance_class default)
+    (via_rule default)
+    (rule
+      (width 250.0)
+    )
+    (circuit 
+      (use_layer F.Cu B.Cu)
+    )
+  )
+  (class "kicad_default"
+    3V3 GND "unconnected-(J1-ID-Pad4)" "Net-(D1-A)" IO0 EN VP VN
+    IO34 IO35 IO32 IO33 IO25 IO26 IO27 IO14
+    IO12 IO13 SD2 SD3 CMD CLK SD0 SD1
+    IO15 IO2 IO4 IO17 IO5 IO18 IO19 IO21
+    "unconnected-(U1-NC-Pad32)" RXD0 TXD0 IO22 IO23 RTS RXD TXD
+    DTR "EXT_5V" VBUS "Net-(Q1-B)" "Net-(Q2-B)" IO16 "D-" D+
+    "unconnected-(IC1-DCD-Pad1)" "unconnected-(IC1-RI{slash}CLK-Pad2)" "unconnected-(IC1-NC-Pad10)" "unconnected-(IC1-SUSPEND-Pad12)" "unconnected-(IC1-CHREN-Pad13)" "unconnected-(IC1-CHR1-Pad14)" "unconnected-(IC1-CHR0-Pad15)" "unconnected-(IC1-GPIO.3{slash}WAKEUP-Pad16)"
+    "unconnected-(IC1-GPIO.2{slash}RS485-Pad17)" "unconnected-(IC1-GPIO.1{slash}RXT-Pad18)" "unconnected-(IC1-GPIO.0{slash}TXT-Pad19)" "unconnected-(IC1-GPIO.6-Pad20)" "unconnected-(IC1-GPIO.5-Pad21)" "unconnected-(IC1-GPIO.4-Pad22)" "unconnected-(IC1-CTS-Pad23)" "unconnected-(IC1-DSR-Pad27)"
+    "Net-(IC1-VBUS)" "Net-(IC1-RSTB)" "Net-(IC1-SUSPENDB)"
+    (clearance_class "kicad_default")
+    (via_rule "kicad_default")
+    (rule
+      (width 250.0)
+    )
+    (circuit 
+      (use_layer F.Cu B.Cu)
+    )
+  )
+)

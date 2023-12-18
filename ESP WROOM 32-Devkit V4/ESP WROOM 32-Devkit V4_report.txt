@@ -1,0 +1,45 @@
+PCB statistics report
+=====================
+- Date: 19-11-2023 10:01:46
+- Project: ESP WROOM 32-Devkit V4
+- Board name: ESP WROOM 32-Devkit V4
+
+Board
+-----
+- Width: 49.4500 mm
+- Height: 27.7500 mm
+- Area: 1372.2375 mm²
+
+Pads
+----
+- Through hole: 54
+- SMD: 163
+- Connector: 0
+- NPTH: 0
+
+Vias
+----
+- Through vias: 40
+- Blind/buried: 0
+- Micro vias: 0
+
+Components
+----------
+
+|              | Front Side | Back Side | Total |
+|--------------|------------|-----------|-------|
+|THT:          |          0 |         2 |     2 |
+|SMD:          |         32 |         0 |    32 |
+|Unspecified:  |          0 |         0 |     0 |
+|Total:        |         32 |         2 |    34 |
+
+Drill holes
+-----------
+
+| Count | Shape |    X Size |    Y Size | Plated | Via/Pad | Start Layer | Stop Layer |
+|-------|-------|-----------|-----------|--------|---------|-------------|------------|
+|    40 | Round | 0.4000 mm | 0.4000 mm |    PTH |     Via |        F.Cu |       B.Cu |
+|    38 | Round | 1.0000 mm | 1.0000 mm |    PTH |     Pad |        F.Cu |       B.Cu |
+|    12 | Round | 0.2000 mm | 0.2000 mm |    PTH |     Pad |        F.Cu |       B.Cu |
+|     2 |  Slot | 1.2000 mm | 0.7000 mm |    PTH |     Pad |        F.Cu |       B.Cu |
+|     2 |  Slot | 1.0500 mm | 0.6500 mm |    PTH |     Pad |        F.Cu |       B.Cu |
